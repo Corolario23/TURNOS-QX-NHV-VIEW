@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///turnos.db'
 db = SQLAlchemy(app)
 
-# Modelo de la base de datos (igual)
+# Modelo de la base de datos
 class CirujanosTurno(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     fecha = db.Column(db.Date, nullable=False)
@@ -14,7 +14,7 @@ class CirujanosTurno(db.Model):
     cirujano1 = db.Column(db.String(100))
     cirujano2 = db.Column(db.String(100))
 
-# Configuración de turnos (igual)
+# Configuración de turnos
 class TurnoCiclo:
     def __init__(self, nombre, color, fecha_inicial, dias_ciclo):
         self.nombre = nombre
@@ -29,21 +29,21 @@ class TurnoVolante:
         self.fecha_inicial = fecha_inicial
 
 TURNOS = {
-    "Turno miércoles": TurnoCiclo("Turno miércoles", "white", datetime(2025, 1, 1).date(), 3),
-    "Turno jueves": TurnoCiclo("Turno jueves", "white", datetime(2025, 1, 2).date(), 4),
+    "Turno miércoles": TurnoCiclo("Turno miércoles", "lightblue", datetime(2025, 1, 1).date(), 3),
+    "Turno jueves": TurnoCiclo("Turno jueves", "lightgreen", datetime(2025, 1, 2).date(), 4),
     "Volante 1": TurnoVolante("Volante 1", "khaki", datetime(2025, 1, 3).date()),
-    "Volante 2": TurnoVolante("Volante 2", "white", datetime(2025, 1, 4).date()),
-    "Turno lunes": TurnoCiclo("Turno lunes", "white", datetime(2025, 1, 6).date(), 2),
-    "Turno martes": TurnoCiclo("Turno martes", "white", datetime(2025, 1, 7).date(), 3)
+    "Volante 2": TurnoVolante("Volante 2", "pink", datetime(2025, 1, 4).date()),
+    "Turno lunes": TurnoCiclo("Turno lunes", "lightcoral", datetime(2025, 1, 6).date(), 2),
+    "Turno martes": TurnoCiclo("Turno martes", "lightgray", datetime(2025, 1, 7).date(), 3)
 }
 
 COLORES_TURNOS = {
-    "Turno miércoles": "white",
-    "Turno jueves": "white",
+    "Turno miércoles": "lightblue",
+    "Turno jueves": "lightgreen",
     "Volante 1": "khaki",
-    "Volante 2": "white",
-    "Turno lunes": "white",
-    "Turno martes": "white"
+    "Volante 2": "pink",
+    "Turno lunes": "lightcoral",
+    "Turno martes": "lightgray"
 }
 
 DIAS_POR_MES = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
