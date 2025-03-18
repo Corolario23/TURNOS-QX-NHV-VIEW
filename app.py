@@ -30,20 +30,20 @@ class TurnoVolante:
 
 TURNOS = {
     "Turno miércoles": TurnoCiclo("Turno miércoles", "lightblue", datetime(2025, 1, 1).date(), 3),
-    "Turno jueves": TurnoCiclo("Turno jueves", "lightgreen", datetime(2025, 1, 2).date(), 4),
+    "Turno jueves": TurnoCiclo("Turno jueves", "plum", datetime(2025, 1, 2).date(), 4),
     "Volante 1": TurnoVolante("Volante 1", "khaki", datetime(2025, 1, 3).date()),
-    "Volante 2": TurnoVolante("Volante 2", "pink", datetime(2025, 1, 4).date()),
-    "Turno lunes": TurnoCiclo("Turno lunes", "lightcoral", datetime(2025, 1, 6).date(), 2),
-    "Turno martes": TurnoCiclo("Turno martes", "lightgray", datetime(2025, 1, 7).date(), 3)
+    "Volante 2": TurnoVolante("Volante 2", "salmon", datetime(2025, 1, 4).date()),
+    "Turno lunes": TurnoCiclo("Turno lunes", "pink", datetime(2025, 1, 6).date(), 2),
+    "Turno martes": TurnoCiclo("Turno martes", "lightgreen", datetime(2025, 1, 7).date(), 3)
 }
 
 COLORES_TURNOS = {
     "Turno miércoles": "lightblue",
-    "Turno jueves": "lightgreen",
+    "Turno jueves": "plum",
     "Volante 1": "khaki",
-    "Volante 2": "pink",
-    "Turno lunes": "lightcoral",
-    "Turno martes": "lightgray"
+    "Volante 2": "salmon",
+    "Turno lunes": "pink",
+    "Turno martes": "lightgreen"
 }
 
 DIAS_POR_MES = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
